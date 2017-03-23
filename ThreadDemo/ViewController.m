@@ -17,6 +17,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    //NSThread
+    [NSThread detachNewThreadSelector:@selector(performInBackground) toTarget:self withObject:nil];
+    [NSRunLoop currentRunLoop];
+    CFRunLoopGetCurrent();
+    
+}
+
+- (void)performInBackground {
+    @autoreleasepool {
+        
+        
+    }
 }
 
 
